@@ -7,7 +7,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
-      - gem_cache:/gems
+      - gem-cache:/usr/src/app/vendor/cache
     env_file:
       - .env.dev.database
       - .env.dev.web
@@ -28,4 +28,4 @@ services:
 
 volumes:
   db-data:
-  gem_cache:
+  gem-cache:
